@@ -8,36 +8,58 @@
   
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Personal CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="content">
+    <!-- orange container -->
+    <div class="balance-container">
+      <div class="balance-left-side">
+        <p id="balance-text">My balance</p>
+        <h2 id="balance">$921.48</h2>
+      </div>
+      <div class="balance-right-side">
+        <img src="images/logo.svg" alt="circle logo">
+      </div>
+    </div>
+    <!-- main container -->
+    <div class="main-container">
+      <h2 id="main-header">Spending - Last 7 days</h2>
+      <div class="bar-container">
+        <canvas id="bar-chart"></canvas>
+      </div>
+      <div id="div-border"></div>
+      <div class="lower-main-portion">
+        <div class="lower-left-side">
+          <p>Total this month</p>
+          <h2 id="total">$478.33</h2>
+        </div>
+        <div class="lower-right-side">
+          <p id="percentage">+2.4%</p>
+          <p>from last month</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/mikowesome">mikowesome</a>.
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
